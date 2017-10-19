@@ -9,7 +9,7 @@ import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 
 public class HttpClient {
-    private static final String URL = "http://10.53.128.101:52273/";
+    private static final String URL = "http://10.53.128.101:5052/";
 
     private static AsyncHttpClient client = new AsyncHttpClient();
 
@@ -27,7 +27,8 @@ public class HttpClient {
         client.post(getAbsoluteUrl(url), params, responseHandler);
     }
 
-    private static String getAbsoluteUrl(String relativeUrl) {
+    public static String getAbsoluteUrl(String relativeUrl) {
         return URL + relativeUrl;
     }
+
 }

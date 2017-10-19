@@ -13,7 +13,6 @@ public class CameraDisableReceiver extends DeviceAdminReceiver {
     public void onEnabled(Context context, Intent intent) {
         super.onEnabled(context, intent);
         Toast.makeText(context, "Enabled", Toast.LENGTH_LONG).show();
-        Log.i("aaaaa","aaaaaaaaaa");
 
     }
 
@@ -21,8 +20,6 @@ public class CameraDisableReceiver extends DeviceAdminReceiver {
     public void onDisabled(Context context, Intent intent) {
         super.onDisabled(context, intent);
         Toast.makeText(context, "disabled", Toast.LENGTH_LONG).show();
-        Log.i("eeeeeeeee","eeeeeeeee");
 
     }
-
 }
