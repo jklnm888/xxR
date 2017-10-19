@@ -1,5 +1,6 @@
 package mter.mter;
 
+import android.content.Intent;
 import android.nfc.NdefMessage;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -38,9 +39,31 @@ public class MainActivity extends AppCompatActivity {
         name = (TextView)findViewById(R.id.name);
         number = (TextView)findViewById(R.id.number);
         category = (TextView)findViewById(R.id.category);
+        Button QRscanBtn = (Button)findViewById(R.id.qr_scan_btn);
+        QRscanBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
 
         ImageButton inoutRecordBtn = (ImageButton)findViewById(R.id.inout_record_btn);
         ImageButton settingsBtn    = (ImageButton)findViewById(R.id.settings_btn);
+        inoutRecordBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), InoutRecordActivity.class);
+                startActivity(i);
+            }
+        });
+        settingsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), SettingsActivity.class);
+                startActivity(i);
+            }
+        });
 
         test =(Button)findViewById(R.id.test_btn);
         test.setOnClickListener(new View.OnClickListener() {
@@ -62,24 +85,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-//
-//        //nfc 인텐트 받아주기
-//    protected void onNewIntent(Intent paramIntent) {
-//        super.onNewIntent(paramIntent);
-//        if ((paramIntent != null) && (paramIntent.getAction().equals("android.nfc.action.NDEF_DISCOVERED")))
-//        {
-//            if (!isEntered) {
-//                isEntered = true;
-//                Toast.makeText(this, "입영하셨습니다", Toast.LENGTH_SHORT).show();
-//                //db에 입영 기록 남기기
-//            }else{
-//                isEntered=false;
-//                Toast.makeText(this, "퇴영하셨습니다", Toast.LENGTH_SHORT).show();
-//                //db에 퇴영 기록 남기기
-//            }
-//        }
-//            //mMessage를 통해 DB에 { 군번: ~, 입출시간: 2017-01-01-10-12(getData,toString?) } 업로드
-//    }
 //
 //
 //    public void startAutoStartSerivce(Intent autointent){
