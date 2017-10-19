@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/profile_img"
+        android:layout_width="115dp"
+        android:layout_height="145dp"
+        android:layout_marginLeft="135dp"
+        android:layout_marginTop="133dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/profile1" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="226dp"
+        android:layout_height="43dp"
+        android:layout_marginLeft="79dp"
+        android:layout_marginTop="7dp"
+        android:text="중사 김진구"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_img" />
+
+
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="134dp"
+        android:layout_marginTop="11dp"
+        android:text="16-76030655"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <TextView
+        android:id="@+id/category"
+        android:layout_width="104dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="-1dp"
+        android:text="육군"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number" />
+
+    <ImageButton
+        android:id="@+id/settings_btn"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:elevation="0dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/settings"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="402dp"
+        android:layout_marginRight="84dp"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <ImageButton
+        android:id="@+id/inout_record_btn"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/inout"
+        android:layout_marginLeft="78dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="402dp" />
+
+    <TextView
+        android:layout_width="70dp"
+        android:layout_height="25dp"
+        android:layout_marginRight="84dp"
+        android:text="설정"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="39dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/settings_btn"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:layout_width="102dp"
+        android:layout_height="24dp"
+        android:layout_marginLeft="62dp"
+        android:text="입출기록"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="28dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/inout_record_btn"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="58dp"
+        android:layout_height="55dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/mter"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="47dp"
+        android:layout_marginLeft="106dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/logo"
+        android:layout_width="115dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="47dp"
+        android:text="m'ter"
+        android:textAlignment="viewStart"
+        android:gravity="start"
+        android:textSize="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/imageView2"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.0" />
+
+    <Button
+        android:id="@+id/test_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Test"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="503dp"
+        android:layout_marginLeft="148dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
